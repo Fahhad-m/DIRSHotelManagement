@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+	<!-- Configuration for data collectors -->
+	<DataCollectionRunSettings>
+		<DataCollectors>
+			<DataCollector friendlyName="Event Log" uri="datacollector://Microsoft/EventLog/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TestTools.DataCollection.EventLog.EventLogDataCollector, Microsoft.VisualStudio.TestTools.DataCollection, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+		</DataCollectors>
+	</DataCollectionRunSettings>
+</RunSettings>

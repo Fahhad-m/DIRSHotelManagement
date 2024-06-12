@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+ 
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="7.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.25.0" />
+    <PackageReference Include="Moq" Version="4.20.70" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.2.10" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.10" />
+    <PackageReference Include="coverlet.collector" Version="3.2.0" />
+   <ProjectReference Include="..\DIRSHotelManagement\DIRSHotelManagement.csproj" />
+  </ItemGroup>
+
+   
+
+	<Target Name="CopyDepsFile" AfterTargets="Build">
+		<Copy SourceFiles="..\DIRSHotelManagement\bin\Debug\net7.0\DIRSHotelManagement.deps.json" DestinationFolder="..\DIRSHotelManagement\DIRSHotel.Tests\bin\Debug" />
+	</Target>
+</Project>
